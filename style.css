@@ -1,0 +1,78 @@
+body {
+  background: #FBFCFC;
+}
+
+#main {
+  width: 400px;
+  height: 400px;
+  margin: 200px auto;
+  perspective: 800px;
+}
+
+#box {
+  width: 400px;
+  transform-style: preserve-3d;
+  animation: rotate 20s linear 0s infinite running;
+}
+
+#box div {
+  width: 400px;
+  height: 400px;
+  position: absolute;
+/*   opacity: 0.8;
+  color: white;
+  text-align: center;
+  line-height: 400px;
+  font-size: 100px; */
+}
+
+#front {
+  transform: translateZ(200px);
+  background: url('http://cdn.earthporm.com/wp-content/uploads/2015/03/cute-cats-sleeping-on-dogs-26__605.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#back {
+  transform: rotateY(180deg) translateZ(200px);
+  background: url('http://3.bp.blogspot.com/-bJabNSsfgok/TdKPU0EupnI/AAAAAAAACLk/d0j9B2HqM9M/s1600/cat_dog.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#left {
+  transform: rotateY(-90deg) translateX(-200px);
+  transform-origin: left;
+  background: url('http://www.lovethispic.com/uploaded_images/51190-Cute-Cat-Hug.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#right {
+  transform: rotateY(90deg) translateX(200px);
+  transform-origin: right;
+  background: url('http://en.bcdn.biz/Images/2017/2/28/c4be6c75-fa15-48fb-869c-ef9844090a94.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#top {
+  transform: rotateX(-90deg) translateY(-200px);
+  transform-origin: top;
+  background: #ff9999;
+}
+
+#bottom {
+  transform: rotateX(90deg) translateY(200px);
+  transform-origin: bottom;
+  background: #ff9999;
+}
+
+@keyframes rotate {
+  0% { transform: rotateY(0); }
+  100% { transform: rotateY(360deg); }
+}
